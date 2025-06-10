@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MarketShop</title>
+  <script src="https://www.paypal.com/sdk/js?client-id=AbRoX_O-uCvwe1j1Z-g3rlLZf-3CT0OByQf8vG6rWuDbQlG6mYfA26olQRohF___eg9LBwrMlE0hKTU5&currency=EUR"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fefefe;
+    }
+
+    .logoCommercial {
+      background-color: rgb(13, 14, 13);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .link a {
+      color: white;
+      padding: 0 25px;
+      border-radius: 15px;
+      text-decoration: none;
+    }
+
+    .link a:hover {
+      background-color: red;
+    }
+
+    .zizou {
+      color: white;
+    }
+
+    .style-button {
+      background-color: blue;
+      border-radius: 15px;
+      padding: 5px 15px;
+      color: white;
+      border: none;
+    }
+
+    .gmail {
+      background-color: red;
+      border-radius: 15px;
+      padding: 5px 15px;
+      color: white;
+      border: none;
+    }
+
+    .difimage {
+      width: 500px;
+      height: 350px;
+      border: 1px solid black;
+      background-image: url(images/1.jpg);
+      animation: photo 20s infinite 4s;
+    }
+
+    @keyframes photo {
+      
+
+      10% {
+        background-image: url(12.jpg);
+      }
+
+      20% {
+        background-image: url(13.jpg);
+      }
+      30{
+        background-image: url(14.jpg);
+      }
+      40% {
+        background-image: url(15.jpg);
+      }
+
+      50% {
+        background-image: url(16.jpg);
+      }
+
+      60% {
+        background-image: url(17.jpg);
+      }
+      70{
+        background-image: url(8.jpg);
+      }
+      80% {
+        background-image: url(19.jpg);
+      }
+
+      90% {
+        background-image: url(20.jpg);
+      }
+
+      10% {
+        background-image: url(1.jpg);
+      }
+      20%{
+        background-image: url(22.jpg);
+      }
+      30% {
+        background-image: url(23.jpg);
+      }
+
+      40% {
+        background-image: url(24.jpg);
+      }
+
+      50% {
+        background-image: url(25.jpg);
+      }
+      60%{
+        background-image: url(26.jpg);
+      }
+      70% {
+        background-image: url(27.jpg);
+      }
+
+    80% {
+        background-image: url(28.jpg);
+      }
+
+      50% {
+        background-image: url(29.jpg);
+      }
+      90%{
+        background-image: url(30.jpg);
+      }
+      50% {
+        background-image: url(31.jpg);
+      }
+
+     10% {
+        background-image: url(images/32.jpg);
+      }
+
+      20% {
+        background-image: url(images/33.jpg);
+      }
+      70%{
+        background-image: url(images/34.jpg);
+      }
+      90% {
+        background-image: url(images/35.jpg);
+      }
+
+      20% {
+        background-image: url(images/366.jpg);
+      }
+
+      60% {
+        background-image: url(images/37.jpg);
+      }
+      40%{
+        background-image: url(images/38.jpg);
+      }
+      30% {
+        background-image: url(images/39.jpg);
+      }
+
+      40% {
+        background-image: url(images/40.jpg);
+      }
+
+      20% {
+        background-image: url(images/41.jpg);
+      }
+      9%{
+        background-image: url(images/42.jpg);
+      }
+    }
+
+    .lading {
+      background-color: rgb(13, 14, 13);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 50px;
+      border-radius: 0 0 50px 50px;
+    }
+
+    .left-section {
+      width: 500px;
+    }
+
+    .shoping {
+      width: 1000px;
+      background-color: rgb(0, 255, 76);
+      border-radius: 15px;
+      padding: 5px 15px;
+      color: rgb(0, 0, 0);
+      border: none;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product-card {
+      background: #fff;
+      border: 1px solid #eee;
+      padding: 10px;
+      text-align: center;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+    }
+
+    .name {
+      margin: 10px 0 5px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .price {
+      font-size: 14px;
+      color: #000;
+      font-weight: bold;
+    }
+
+
+
+
+
+
+
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000000; /* noir */
+  color: white; /* texte blanc par défaut */
+}
+
+a {
+  color: #1E90FF; /* bleu pour les liens */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #63aaff; /* bleu clair au survol */
+}
+
+.logoCommercial {
+  background-color: #000000; /* noir */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.link a {
+  color: #1E90FF; /* bleu */
+  padding: 0 25px;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+.link a:hover {
+  background-color: #00008B; /* bleu foncé au survol */
+}
+
+.style-button {
+  background-color: #1E90FF; /* bleu */
+  border-radius: 15px;
+  padding: 5px 15px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.style-button:hover {
+  background-color: #63aaff;
+}
+
+.gmail {
+  background-color: #1E90FF; /* bleu */
+  border-radius: 15px;
+  padding: 5px 15px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.gmail:hover {
+  background-color: #63aaff;
+}
+
+.lading {
+  background-color: #000000; /* noir */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  border-radius: 0 0 50px 50px;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 10px 10px 0 0;
+}
+
+footer a {
+  color: #1E90FF;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+footer a:hover {
+  color: #63aaff;
+}
+
+
+
+    
+      
+
+
+  </style>
+</head>
+<body>
+  <div class="logoCommercial">
+    <img src="images/picto-ecommerce.png" width="100" />
+    <h1 class="zizou">MarketShop</h1>
+    <div class="link">
+      <a href="www.MarketShop.com">Home</a>
+      <a href="www.MarketShop.com">Our Shop</a>
+      <a href="tel:+213557804350" id="contact-link">Contact</a>
+      <button href="www.google.com"class="style-button">Help</button>
+    </div>
+  </div>
+
+  <div class="lading">
+    <div class="left-section">
+      <span class="zizou">Welcome to MarketShop</span>
+      <h1 class="zizou">MarketShop, your new favorite online shopping site!</h1>
+      <p class="zizou">With MarketShop, you'll find all the products you love. For help, call us or send an email.</p>
+      <button class="gmail">
+        <a href="mailto:Marketshop02025@gmail.com" class="gmail">
+  <img src="https://thumbs.dreamstime.com/b/logo-gmail-nouvelle-ic%C3%B4ne-vectoriel-service-de-messagerie-%C3%A9lectronique-d%C3%A9velopp%C3%A9-par-version-redessin%C3%A9e-google-le-fichier-env-201003176.jpg" width="40" alt="Gmail logo" />
+  <h2>Marketshop02025@gmail.com</h2>
+</a>
+
+      </button>
+    </div>
+    <div class="contimg">
+      <div class="difimage"></div>
+    </div>
+  </div>
+
+  <div>
+    <center>
+      <button class="shoping">All Shop</button>
+    </center>
+  </div>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="1.jpg" />
+      <p class="name">Manchons respirants pour doigts</p>
+      <p class="price">€2.06</p>
+      <div id="paypal1"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="12.jpg" />
+      <p class="name">Gants de jeu anti-rayures pour gamer</p>
+      <p class="price">€3.8</p>
+      <div id="paypal2"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="13.jpg" />
+      <p class="name">Manchons de doigts R pour msnette de jeux telephone</p>
+      <p class="price">€1</p>
+      <div id="paypal3"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="14.jpg" />
+      <p class="name">Gants de doigts pour joueurs,slim,portable,leger avec etui de rangement</p>
+      <p class="price">€2</p>
+      <div id="paypal4"></div>
+    </div>
+  </div>
+
+    <div class="product-grid">
+    <div class="product-card">
+      <img src="15.jpg" />
+      <p class="name">ensemble femmes montre bague collier boucles d'oreilles Bracelet</p>
+      <p class="price">€2.48</p>
+      <div id="paypal1"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="16.jpg" />
+      <p class="name">Montres colorees pour les jeunes enfants</p>
+      <p class="price">€5.07</p>
+      <div id="paypal2"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="17.jpg" />
+      <p class="name">Montre de sport numerique electronique unisexe,heure mondiale,fonction complete,LED</p>
+      <p class="price">€15.25</p>
+      <div id="paypal3"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="18.jpg" />
+      <p class="name">Montres de luxe en or rose pour les hommes et les femmes</p>
+      <p class="price">€15.65</p>
+      <div id="paypal4"></div>
+    </div>
+  </div>
+    
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="19.jpg" />
+      <p class="name">Ecouteurs Bluetooth,ecouteurs de jeu TWS,casque sans fil avec micro pour Xiaomi Lenovo</p>
+      <p class="price">€9</p>
+      <div id="paypal1"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="20.jpg" />
+      <p class="name">Ecouteurs sans fil Bluetooth TWS,ecouteurs de sport stereo HIFI avec affichage numerique</p>
+      <p class="price">€3.5</p>
+      <div id="paypal2"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="21.jpg" />
+      <p class="name">Magnetique XT-11 Bluetooth 4.2 sans fil, ecouteurs sport</p>
+      <p class="price">€4.03</p>
+      <div id="paypal3"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="22.jpg" />
+      <p class="name">Ecouteurs filaires avec cable de 3.5mm,QKZ,AK6,qualite sonore HIFI,ecouteur avec fil</p>
+      <p class="price">€5.77</p>
+      <div id="paypal4"></div>
+    </div>
+  </div>
+    
+    <div class="product-grid">
+    <div class="product-card">
+      <img src="23.jpg" />
+      <p class="name">Haut-parleur sans fil a conduction osseuse-son HIFI TWS,diametre 4cm</p>
+      <p class="price">€12.15</p>
+      <div id="paypal1"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="24.jpg" />
+      <p class="name">souris sans fil 2.4G recepteur USB 6 boutons souris optique sans fil</p>
+      <p class="price">€6.1</p>
+      <div id="paypal2"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="25.jpg" />
+      <p class="name">3200DPI souris d'ordinateur colore LED souris professionnelle jeu</p>
+      <p class="price">€5.72</p>
+      <div id="paypal3"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="26.jpg" />
+      <p class="name">souris optique filaire USB pour ordinateur portable,3D,1200 ug I,maison,buureau</p>
+      <p class="price">€5.07</p>
+      <div id="paypal4"></div>
+    </div>
+  </div>
+     
+    <div class="product-grid">
+    <div class="product-card">
+      <img src="27.jpg" />
+      <p class="name">Microphone USB por jeu,pour pc,Mac,PS4/5.avec moniteur muet RGB,reduction du bruit ,pour enregistrement en streaming</p>
+      <p class="price">€19.12</p>
+      <div id="paypal1"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="28.jpg" />
+      <p class="name">Microphone Lavalier sans fil,mini micro Portable pour enregistrement audio et video</p>
+      <p class="price">€9.39</p>
+      <div id="paypal2"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="29.jpg" />
+      <p class="name">Mini micro de studio stereo Portable 3.5mm,KTV karaoke,pour smart phone,ordinateur portable,PC</p>
+      <p class="price">€2.89</p>
+      <div id="paypal3"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="30.jpg" />
+      <p class="name">AUBESS-Microphone a pince pour telephone portable,audio vocal,ket,3.5mm,1.5m</p>
+      <p class="price">€4.33</p>
+      <div id="paypal4"></div>
+    </div>
+  </div>
+
+    <div class="product-grid">
+    <div class="product-card">
+      <img src="31.jpg" />
+      <p class="name">Espagnol francais russe arabe lettre keycaps clavier de jeux USB filaire 104 touches pour ordinateur</p>
+      <p class="price">€17.21</p>
+      <div id="paypal1"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="32.jpg" />
+      <p class="name">Clavier mecanique retroeclaire a 104 touches ,filaire,pour jeu,lumineux,pour gammer</p>
+      <p class="price">€22.48</p>
+      <div id="paypal2"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="33.jpg" />
+      <p class="name">GAMINJA RGB lumiere controleur de jeu sans fil pour PS4 PS3 console ordinateur PC LED Bluetooth manette 6 axes</p>
+      <p class="price">€17.95</p>
+      <div id="paypal3"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="34.jpg" />
+      <p class="name">Poignee de Console de jeu double couche,support universal adapte pour PS/PS4/XBOX/XBOX360</p>
+      <p class="price">€13.26</p>
+      <div id="paypal4"></div>
+    </div>
+  </div>
+    
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="35.jpg" />
+      <p class="name">Percha a Selfie Portable Bluetooth retractable multifonctionnelle 103cm support de telephone</p>
+      <p class="price">€9.11</p>
+      <div id="paypal1"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="36.jpg" />
+      <p class="name">ONIKUMA-Casque de jeu sans fil Leic-mode ,suppression de bruit,Microphone HD,casque professionnel</p>
+      <p class="price">€8.06</p>
+      <div id="paypal2"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="37.jpg" />
+      <p class="name">1 pieces boite de batterie Portable USB 5V 1A boitier de batterie externe  18650</p>
+      <p class="price">€4,13</p>
+      <div id="paypal3"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="38.jpg" />
+      <p class="name">Boitier d'alimentation mobile,adaptateur de batterie,3.6V,5V,6V,12V,6*18650</p>
+      <p class="price">€12.32</p>
+      <div id="paypal4"></div>
+    </div>
+  </div>
+    
+    <div class="product-grid">
+    <div class="product-card">
+      <img src="39.jpg" />
+      <p class="name">Machine de coupe des cheveux professionnelle tondeuse a cheveux electrique sans fil rasoir a barbe hommes </p>
+      <p class="price">€9.29</p>
+      <div id="paypal1"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="40.jpg" />
+      <p class="name">Sony-Grand Theft Auto V GTA5 PS4 Game card,Genuine New CD Game Games,V GTA5</p>
+      <p class="price">€40.89</p>
+      <div id="paypal2"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="41.jpg" />
+      <p class="name">Telescope monoculaire exterieur 2000*25 HD, mini Telescope portable pour telephone portable avec support</p>
+      <p class="price">€5.6</p>
+      <div id="paypal3"></div>
+    </div>
+
+    <div class="product-card">
+      <img src="42.jpg" />
+      <p class="name">Diamant minerai lumieree couleur changeant verseau torche modele cadeau veilleuse</p>
+      <p class="price">€17</p>
+      <div id="paypal4"></div>
+    </div>
+  </div>
+
+   <script src="https://www.paypal.com/sdk/js?client-id=AbRoX_O-uCvwe1j1Z-g3rlLZf-3CT0OByQf8vG6rWuDbQlG6mYfA26olQRohF___eg9LBwrMlE0hKTU"></script>
+<script>
+  // Sélectionne tous les conteneurs de produits
+  const productCards = document.querySelectorAll('.product-card');
+
+  productCards.forEach((card, index) => {
+    // Récupère le conteneur PayPal (div avec ID unique comme paypal1, paypal2...)
+    const paypalContainer = card.querySelector('div[id^="paypal"]');
+
+    // Récupère le prix depuis l'élément .price (et enlève le symbole €)
+    const priceText = card.querySelector('.price').textContent.trim();
+    const priceValue = parseFloat(priceText.replace('€', '').replace(',', '.'));
+
+    if (paypalContainer && !isNaN(priceValue)) {
+      paypal.Buttons({
+        createOrder: function (data, actions) {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: priceValue.toFixed(2) // Formate à deux décimales
+              }
+            }]
+          });
+        },
+        onApprove: function (data, actions) {
+          return actions.order.capture().then(function (details) {
+            alert("Merci " + details.payer.name.given_name + "! Paiement de €" + priceValue.toFixed(2) + " reçu.");
+          });
+        }
+      }).render(paypalContainer);
+    }
+  });
+</script>
+
+ <footer style="background-color: #0d0e0d; color: white; text-align: center; padding: 20px; margin-top: 40px; border-radius: 10px 10px 0 0;">
+  <h2>MarketShop</h2>
+  <p>
+    <a href="tel:+213554649817" style="color: white; text-decoration: none; margin: 0 15px;">📞 +213 554 64 98 17</a> |
+    <a href="tel:+213557804350" style="color: white; text-decoration: none; margin: 0 15px;">📞 +213 557 80 43 50</a> |
+    <a href="https://www.instagram.com/zinedineadem?igsh=ejE3MjJhMWxwb3ds" target="_blank" style="color: white; text-decoration: none; margin: 0 15px;">📸 Instagram</a> |
+    <a href="https://www.facebook.com/zinou.adem.2025" target="_blank" style="color: white; text-decoration: none; margin: 0 15px;">👍 Facebook</a>
+  </p>
+</footer>
+
+       
+  
+</body>
+
+
+
+
